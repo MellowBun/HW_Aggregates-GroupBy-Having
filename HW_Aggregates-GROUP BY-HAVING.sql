@@ -13,6 +13,14 @@ USE EntertainmentAgencyExample;
 --2. Find the number of entertainers who had an engagement in 2017. (1 column, 1 row, value: 12)
 --HELP
 -- ***************************************************************************************
+--SELECT COUNT(EntertainerID) FROM Engagements
+--WHERE EndDate BETWEEN '2017-01-01' AND '2017-12-31' 
+--GROUP BY EntertainerID
+--HAVING EntertainerID = ''
+--ORDER BY EntertainerID
+
+
+--SELECT * FROM Engagements
 
 --SELECT COUNT(*) as NumberOfEngagements, EntertainerID FROM Engagements
 --WHERE EndDate BETWEEN '2017-01-01' AND '2017-12-31'
@@ -46,7 +54,19 @@ USE EntertainmentAgencyExample;
 --5. Find the total amount of money made by 'Jazz Persuasion' in 2018. (1 column, 1 row, value: 2,040)
 --HELP
 -- ***************************************************************************************
+--SELECT * FROM Entertainers
 
+--SELECT SUM(ContractPrice) AS TotaMoneyMade FROM Engagements
+--WHERE EndDate BETWEEN '2018-01-01' AND '2018-12-31'
+
+
+--SELECT * FROM Engagements
+
+--SELECT
+--WHERE
+--GROUP BY 
+--HAVING
+--ORDER BY
 
 
 
@@ -98,4 +118,3 @@ USE EntertainmentAgencyExample;
 --SELECT AgtState, AVG(Salary) as AvgSalary  FROM Agents
 --GROUP BY AgtState
 --HAVING AVG(Salary) > 10000
-
